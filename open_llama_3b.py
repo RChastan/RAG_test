@@ -17,7 +17,7 @@ model = LlamaForCausalLM.from_pretrained(
 
 #%%
 
-prompt = 'Q: What is the largest animal?\nA:'
+prompt = 'You are an AI assistant that follows instruction extremely well. Help as much as you can.\nQ: How to cook proper bolognese ?\nA: '
 input_ids = tokenizer(prompt, return_tensors="pt").input_ids
 
 generation_output = model.generate(
