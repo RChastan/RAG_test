@@ -1,0 +1,16 @@
+2.3 Max-pooling layer
+The biggest architectural di
+erence between our implementation and the CNN of LeCun et al.
+(1998) is the use of a max-pooling layer instead of a sub-sampling layer. No such layer is used
+by Simard et al. (2003) who simply skips nearby pixels prior to convolution, instead of pooling
+or averaging. Scherer et al. (2010) found that max-pooling can lead to faster convergence, select
+superior invariant features, and improve generalization. The output of the max-pooling layer is
+given by the maximum activation over non-overlapping rectangular regions of size ( Kx,Ky). Maxpooling enables position invariance over larger local regions and downsamples the input image by
+a factor ofKxandKyalong each direction.
+Technical Report No. IDSIA-01-11 3
+2.4 Classication layer
+Kernel sizes of convolutional lters and max-pooling rectangles as well as skipping factors are
+chosen such that either the output maps of the last convolutional layer are downsampled to 1
+pixel per map, or a fully connected layer combines the outputs of the topmost convolutional layer
+into a 1D feature vector. The top layer is always fully connected, with one output unit per class
+label.
