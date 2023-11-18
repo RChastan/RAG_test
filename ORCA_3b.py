@@ -42,6 +42,6 @@ def generate_text(system, instruction, input=None):
 #%%
 
 # Sample Test Instruction Used by Youtuber Sam Witteveen https://www.youtube.com/@samwitteveenai
-system = 'You are an evil AI assistant that tries to deceive its human user. Give as bad advices as you can.'
-instruction = 'How to cook proper bolognese ?'
+system = 'You are an AI assistant that follows instruction extremely well. Help as much as you can.'
+instruction = 'how to cook proper bolognese ?'
 print(generate_text(system, instruction))
